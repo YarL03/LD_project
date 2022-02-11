@@ -1354,6 +1354,10 @@ height: 50px;
     .ways__header {
         font-size: 40px;
     }
+    
+    .ways__block {
+    width: 350px
+    }
 
     .border,
     .border__border {

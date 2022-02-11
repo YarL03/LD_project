@@ -303,3 +303,5 @@ document.addEventListener('click', (event) => {
 })
 
 // Some stuff
+
+alert(`window height = ${window.innerHeight}px`)

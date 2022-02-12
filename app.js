@@ -12,7 +12,7 @@ let options = {
     loop: true
   };
 
-setTimeout(() => {let abc = new Typed("#autoTypingText" , options)}, 500)  
+setTimeout(() => {let abc = new Typed("#autoTypingText" , options)}, 1500)  
 
 
 function animateValue(id, start, end, duration) {

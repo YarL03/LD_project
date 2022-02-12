@@ -1,7 +1,6 @@
 import Typed from './src/modules/auto typing/typed.js'
 
 
-alert(`window width = ${window.innerWidth}px`)
 
 //animation of Numbers and intro text
 

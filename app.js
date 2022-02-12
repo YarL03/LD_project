@@ -48,6 +48,7 @@ for (let i = 0; i < slides.length; i++) {
  let offset = -1
 
  function draw(eventTrarg = null) {
+    if (document.querySelector('.wrapper').children.length == 2 && offset == -1) offset = 1
      let img = document.createElement('img')
      img.src = carousel[step]
      img.classList.add('carousel__slide')
@@ -61,8 +62,10 @@ for (let i = 0; i < slides.length; i++) {
         img.style.left = offset*350 + 'px'
      }
       else img.style.left = offset*900 + 'px'
-      eventTrarg ? document.querySelector('.carousel__gallery').prepend(img) :
-      document.querySelector('.carousel__gallery').append(img)
+
+      eventTrarg ? document.querySelector('.wrapper').prepend(img) :
+      document.querySelector('.wrapper').append(img)
+                               
       if (step + 1 == carousel.length && eventTrarg) {
         step = 0
         offset = 1

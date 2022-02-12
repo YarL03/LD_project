@@ -303,7 +303,7 @@ document.addEventListener('click', (event) => {
     blackout.classList.add('hidden')
     blackout.style.zIndex = ''   
     }
-    else return
+    return
 })
 
 // Some stuff

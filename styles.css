@@ -159,7 +159,7 @@ width: 300px;
 
 .blurred-pictures.moving.top {
     top: 50px;
-    left: -400px;
+    left: -1000px;
     animation: moveDown 25s linear infinite;
 }
 
@@ -178,7 +178,7 @@ width: 300px;
     }
     100% {
         top: 50px;
-        left: -400px;
+        left: -600px;
         transform: rotate(360deg);
     }
 }

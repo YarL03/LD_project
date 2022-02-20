@@ -238,7 +238,9 @@ function init() {
 ymaps.ready(init)
 
 document.addEventListener('click', (event) => {
+    let containers = Array.from(document.querySelectorAll('.container'))
     if (event.target != mapButton) {
+        
         if (event.target == blackout) {
             blackout.classList.add('hidden')
             map.classList.add('hidden')
@@ -246,7 +248,10 @@ document.addEventListener('click', (event) => {
             
                 blackout.style.display = ''
                 map.style.display = ''
-            
+                containers.forEach(item => {
+                    item.style.padding = ``
+                    item.style.maxWidth = ``
+            })
         }
         return
     } else {
@@ -254,7 +259,12 @@ document.addEventListener('click', (event) => {
         blackout.style.display = 'block'
         map.style.display = 'block'
         document.body.style.overflow = 'hidden'
-        
+        containers.forEach(item => {
+            console.log(getComputedStyle(item).padding)
+            if (!getComputedStyle(item).padding || getComputedStyle(item).padding == '0px') item.style.padding = `0px 17px 0px 0px`
+            else if (getComputedStyle(item).padding == '0px 40px') item.style.padding = `0px 57px 0px 40px`
+            item.style.maxWidth = `1617px`
+        })
             blackout.classList.remove('hidden')
             map.classList.remove('hidden')
         

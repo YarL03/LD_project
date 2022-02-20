@@ -250,7 +250,6 @@ document.addEventListener('click', (event) => {
                 map.style.display = ''
                 containers.forEach(item => {
                     item.style.padding = ``
-                    item.style.maxWidth = ``
             })
         }
         return
@@ -263,7 +262,6 @@ document.addEventListener('click', (event) => {
             console.log(getComputedStyle(item).padding)
             if (!getComputedStyle(item).padding || getComputedStyle(item).padding == '0px') item.style.padding = `0px 17px 0px 0px`
             else if (getComputedStyle(item).padding == '0px 40px') item.style.padding = `0px 57px 0px 40px`
-            item.style.maxWidth = `1617px`
         })
             blackout.classList.remove('hidden')
             map.classList.remove('hidden')
